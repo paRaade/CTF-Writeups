@@ -18,7 +18,6 @@ Following the logic of the hypothesis in the scenario. The reasonable thing to l
 
 A quick google search shows that WordPress login file name is: wp-login.php.
 
-image of google
 
 Using  **grep -n "wp-login.php" access.log** I can see multiple URL  requests to **/wp-login.php?itsec-hb-token=adminlogin**. 
 ```
