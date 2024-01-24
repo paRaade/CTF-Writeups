@@ -44,7 +44,7 @@ The attacker used sqlmap. SQLMap is an open-source penetration testing tool that
 
 #### *January 14, 2021, at 06:14:00 (UTC)* 
 
-A blended attack attempt is first performed
+A blended attack attempt is attempted
 
 **grep -n "xp_cmdshell" access.log**         
 ```
