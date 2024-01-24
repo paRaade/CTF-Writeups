@@ -92,3 +92,5 @@ Further confirmation that this script was used by the attacker is that immediate
 1718-sh: 1: /usr/sbin/sendmail: not found
 1719-103.69.55.212 - - [14/Jan/2021:06:27:06 +0000] "POST /wp-content/uploads/simple-file-list/fr34k.php HTTP/1.1" 200 1213 "http://172.21.0.3/wp-content/uploads/simple-file-list/fr34k.php" "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Tablet PC 2.0)"
 ```
+Conclusion:
+This is the sequence of events that occurred that allowed the attacker to gain an initial foothold of the operating system hosting WordPress
