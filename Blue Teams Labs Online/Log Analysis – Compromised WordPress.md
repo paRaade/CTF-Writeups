@@ -28,8 +28,6 @@ Using  **grep -n "wp-login.php" access.log** I can see multiple URL  requests to
 72:172.21.0.1 - - [12/Jan/2021:15:53:22 +0000] "GET /wp-admin/css/forms.min.css?ver=5.6 HTTP/1.1" 200 6469 "http://172.21.0.3/wp-login.php?redirect_to=http%3A%2F%2F172.21.0.3%2Fwp-admin%2F&reauth=1" "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0"
 
 ```
-Total wp-login.php count in access.log: **grep -n "wp-login.php" access.log | wc -l**  `225 `
-
 I then looked up a list of  web tools used by attackers in their enumeration or exploitation process.
 **grep -n -e "wpscan" -e "dirbuster" -e "dirsearch" -e "nmap" -e "Burp" -e "ZAP" -e "metasploit" -e "sqlmap" access.log** 
 ```
