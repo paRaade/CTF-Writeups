@@ -29,6 +29,7 @@ Using  **grep -n "wp-login.php" access.log** I can see multiple URL  requests to
 
 ```
 I then looked up a list of  web tools used by attackers in their enumeration or exploitation process.
+
 **grep -n -e "wpscan" -e "dirbuster" -e "dirsearch" -e "nmap" -e "Burp" -e "ZAP" -e "metasploit" -e "sqlmap" access.log** 
 ```
 1364:119.241.22.121 - - [14/Jan/2021:06:01:41 +0000] "GET / HTTP/1.1" 403 3160 "http://172.21.0.3/" "WPScan v3.8.10 (https://wpscan.org/)"
