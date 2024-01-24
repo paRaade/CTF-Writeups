@@ -75,7 +75,7 @@ XSS Payload:
 <script>alert("XSS")</script>
 ```
 #### *January 14, 2021, at 06:26:53 (UTC)*
-After finding a POST request containing **ee-upload-engine.php** I used google to find any information about this and exploit-db was the top result. Exploit-DB, is a online platform that archives  information about security vulnerabilities and exploits. The link I clicked on was for a python script called. **WordPress Plugin Simple File List 4.2.2 - Arbitrary File Upload**. This Python script exploits an arbitrary file upload vulnerability in WordPress plugin 'Simple File List' (version 4.2.2). It generates a .png file with an embedded reverse shell payload, uploads it to the target WordPress site, and then renames the file extension to .php. Upon successful exploitation, the attacker gains remote code execution on the target system.
+After finding a POST request containing **ee-upload-engine.php** I used google to find any information about this and exploit-db was the top result. Exploit-DB, is a online platform that archives  information about security vulnerabilities and exploits. The link I clicked on was for a python script called, **WordPress Plugin Simple File List 4.2.2 - Arbitrary File Upload**. This Python script exploits an arbitrary file upload vulnerability in WordPress plugin 'Simple File List' (version 4.2.2). It generates a .png file with an embedded reverse shell payload, uploads it to the target WordPress site, and then renames the file extension to .php. Upon successful exploitation, the attacker gains remote code execution on the target system.
 
 **grep -n "ee-upload-engine.php" access.log**     
 ```
