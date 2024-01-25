@@ -263,6 +263,7 @@ lin@bountyhacker:~/Desktop$ cat user.txt
 THM{CR1M3_SyNd1C4T3}
 
 ```
+-----
 **Privilege Escalation**
 
 In order to reach the root flag the first thing I did was run the following command. 
