@@ -155,6 +155,7 @@ hashcat -m 900 hahahashes.txt rockyou.txt -r rules/OneRuleToRuleThemAll.rule
 ```
 --------
 **Level 2**
+
 sha256
 Hash: F09EDCB1FCEFC6DFB23DC3505A882655FF77375ED8AA2D1C13F640FCCC2D0C85
 ```
