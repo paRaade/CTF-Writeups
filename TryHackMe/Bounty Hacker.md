@@ -33,7 +33,7 @@ After confirming that  I can reach the target. I run an nmap scan.
 | SC | Runs default scripts |
 | sV | Version detection on open ports | 
 ```
-*nmap -T5 -sC -sV 10.10.74.157*
+nmap -T5 -sC -sV 10.10.74.157
 Starting Nmap 7.94SVN ( [https]://nmap.org ) at 2024-01-25 11:16 EST
 Nmap scan report for 10.10.137.182
 Host is up (0.20s latency).
