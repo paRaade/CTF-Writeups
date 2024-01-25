@@ -50,6 +50,7 @@ hashcat -m 0 hahahashes.txt rockyou.txt -r rules/OneRuleToRuleThemAll.rule
 48bb6e862e54f2a795ffc4e541caed4d:easy
 ```
 --------
+sha1
 Hash: CBFDAC6008F9CAB4083784CBD1874F76618D2A97
 ```
 hashid CBFDAC6008F9CAB4083784CBD1874F76618D2A97 
@@ -71,9 +72,10 @@ john --show hashes.txt
 ?:password123
 ```
 -----
+sha256
 Hash: 1C8BFE8F801D79745C4631D09FFF36C82AA37FC4CCE4FC946683D7B336B63032
 ```
-sha256
+
 hashid 1C8BFE8F801D79745C4631D09FFF36C82AA37FC4CCE4FC946683D7B336B63032
 Analyzing '1C8BFE8F801D79745C4631D09FFF36C82AA37FC4CCE4FC946683D7B336B63032'
 [+] Snefru-256 
@@ -90,7 +92,7 @@ hashcat -m 1400 hahahashes.txt rockyou.txt -r rules/OneRuleToRuleThemAll.rule
 1c8bfe8f801d79745c4631d09fff36c82aa37fc4cce4fc946683d7b336b63032:letmein
 ```
 ------
-
+bcrypt
 Hash: $2y$12$Dwt1BZj6pcyc3Dy1FWZ5ieeUznr71EeNkJkUlypTsgbX1H68wsRom
 
 
@@ -119,9 +121,9 @@ john --show hashes.txt
 ?:bleh
 ```
 --------
+md4
 Hash: 279412f945939ba78ce0758d3fd83daa
 ```
-MD4 Hash
 hashid 279412f945939ba78ce0758d3fd83daa                              
 Analyzing '279412f945939ba78ce0758d3fd83daa'
 [+] MD2 
@@ -148,6 +150,7 @@ hashcat -m 900 hahahashes.txt rockyou.txt -r rules/OneRuleToRuleThemAll.rule
 ```
 --------
 **Level 2**
+sha256
 Hash: F09EDCB1FCEFC6DFB23DC3505A882655FF77375ED8AA2D1C13F640FCCC2D0C85
 ```
 Sha256
@@ -167,10 +170,10 @@ hashcat -m 1400 hahahashes.txt rockyou.txt -r rules/OneRuleToRuleThemAll.rule
 f09edcb1fcefc6dfb23dc3505a882655ff77375ed8aa2d1c13f640fccc2d0c85:paule
 ```
 --------
-
+NTLM
 Hash: 1DFECA0C002AE40B8619ECF94819CC1B
 ```
-NTLM
+
 hashid 1DFECA0C002AE40B8619ECF94819CC1B                                
 Analyzing '1DFECA0C002AE40B8619ECF94819CC1B'
 [+] MD2 
@@ -197,6 +200,7 @@ hashcat -m 1000 hahahashes.txt rockyou.txt -r rules/OneRuleToRuleThemAll.rule
 ```
 ---------
 ```
+sha512
 Hash: $6$aReallyHardSalt$6WKUTqzq.UQQmrm0p/T7MPpMbGNnzXPMAXi4bJMl9be.cfi3/qxIf.hsGpS41BqMhSrHVXgMpdjS6xeKZAs02.
 
 Salt: aReallyHardSalt
