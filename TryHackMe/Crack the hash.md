@@ -233,4 +233,6 @@ Analyzing 'e5d8870e5bdd26602cab8dbe07a942c8669e56d6'
 [+] Skein-256(160) 
 [+] Skein-512(160) 
 
+hashcat -m 160 hahahashes.txt rockyou.txt
+e5d8870e5bdd26602cab8dbe07a942c8669e56d6:tryhackme:481616481616
 ```
