@@ -21,6 +21,7 @@ The following are commands that can be used with hashcat and john the ripper
 
 **Level 1**
 
+md5
 Hash: 48bb6e862e54f2a795ffc4e541caed4d
 
 ```
