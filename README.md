@@ -7,5 +7,5 @@
 ## **TryHackMe**
  - [Crack the Hash](TryHackMe/Crack%20the%20hash.md)
 
-## **kc7cyber**
+## **KC7**
 
