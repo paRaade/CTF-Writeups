@@ -14,7 +14,7 @@ All of these hashes can be cracked with the online tools: [crackstation](https:/
 ![Pasted image 20240124215257](https://github.com/paRaade/CTF-Writeups/assets/126734769/9d73ff1d-7805-4049-8f4f-ee5679eac39d)
 
 
-I still chose to use hashcat and john the ripper which are two offline password cracker tools for practice
+The following are commands that can be used with hashcat and john the ripper
 
  - Hashcat on Host OS (Windows)
  -  John the Ripper in Virtual Machine  (Linux)
