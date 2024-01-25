@@ -189,7 +189,8 @@ server-status           [Status: 403, Size: 278, Words: 20, Lines: 10, Duration:
                                                                                                     
 ```
 There isn't anything else to enumerate on port 80 other than the images directory.
-![http-10 10 74 157-images-](https://github.com/paRaade/CTF-Writeups/assets/126734769/e9b8a85d-c7bd-4fc8-a98f-cb1d828ad185)
+![http-10 10 74 157-images-](https://github.com/paRaade/CTF-Writeups/assets/126734769/4f21e002-a675-4101-a9e1-febf1d822167)
+
 
 ------
 
