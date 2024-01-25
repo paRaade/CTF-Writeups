@@ -156,6 +156,8 @@ The user lin created a task list. Locks.txt is possibly a list of passwords that
 **Website Enumeration (Port 80)**
 
 At the index of the web server on port 80, the following message can be viewed
+![http-10 10 137 182-](https://github.com/paRaade/CTF-Writeups/assets/126734769/53225ff3-6e2b-4b48-a7be-9ddc506a1a5e)
+
 
 ```
 ffuf -w directory-list-2.3-medium.txt:FUZZ -u http://10.10.74.157/FUZZ
@@ -187,6 +189,7 @@ server-status           [Status: 403, Size: 278, Words: 20, Lines: 10, Duration:
                                                                                                     
 ```
 There isn't anything else to enumerate on port 80 other than the images directory.
+![http-10 10 74 157-images-](https://github.com/paRaade/CTF-Writeups/assets/126734769/e9b8a85d-c7bd-4fc8-a98f-cb1d828ad185)
 
 ------
 
