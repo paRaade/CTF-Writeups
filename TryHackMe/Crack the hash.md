@@ -1,6 +1,7 @@
 
 
 Lab: [Crack the hash](https://tryhackme.com/room/crackthehash)
+
 Tools: hashID, hashcat, John the Ripper, rockyou.txt, OneRuleToRuleThemAll.rule
 
 
