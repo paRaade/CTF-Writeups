@@ -7,6 +7,7 @@ Tools: hashID, hashcat, John the Ripper, rockyou.txt, OneRuleToRuleThemAll.rule
 
 
 All of these hashes can be cracked with the online tools:[crackstation](https://crackstation.net/) and [hashes.com](https://hashes.com/en/decrypt/hash).
+
 ![Pasted image 20240124204447](https://github.com/paRaade/CTF-Writeups/assets/126734769/f2bd69e8-19a5-4042-b796-b179e7ee4766)
 ![Pasted image 20240124215425](https://github.com/paRaade/CTF-Writeups/assets/126734769/ac272b71-67a6-4aa4-9dea-5bbe9c63d227)
 ![Pasted image 20240124211017](https://github.com/paRaade/CTF-Writeups/assets/126734769/7c1115c5-ba6d-46e9-a67e-9f9e294cd762)
