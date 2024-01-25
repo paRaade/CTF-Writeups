@@ -118,6 +118,7 @@ bleh             (?)
 john --show hashes.txt                                              
 ?:bleh
 ```
+--------
 Hash: 279412f945939ba78ce0758d3fd83daa
 ```
 MD4 Hash
@@ -145,6 +146,7 @@ Analyzing '279412f945939ba78ce0758d3fd83daa'
 hashcat -m 900 hahahashes.txt rockyou.txt -r rules/OneRuleToRuleThemAll.rule
 279412f945939ba78ce0758d3fd83daa:Eternity22
 ```
+--------
 **Level 2**
 Hash: F09EDCB1FCEFC6DFB23DC3505A882655FF77375ED8AA2D1C13F640FCCC2D0C85
 ```
@@ -164,7 +166,7 @@ Analyzing 'F09EDCB1FCEFC6DFB23DC3505A882655FF77375ED8AA2D1C13F640FCCC2D0C85'
 hashcat -m 1400 hahahashes.txt rockyou.txt -r rules/OneRuleToRuleThemAll.rule
 f09edcb1fcefc6dfb23dc3505a882655ff77375ed8aa2d1c13f640fccc2d0c85:paule
 ```
-
+--------
 
 Hash: 1DFECA0C002AE40B8619ECF94819CC1B
 ```
@@ -209,7 +211,7 @@ Analyzing '$6$aReallyHardSalt$6WKUTqzq.UQQmrm0p/T7MPpMbGNnzXPMAXi4bJMl9be.cfi3/q
 hashcat -m 1800 hahahashes.txt rockyou.txt -O
 $6$aReallyHardSalt$6WKUTqzq.UQQmrm0p/T7MPpMbGNnzXPMAXi4bJMl9be.cfi3/qxIf.hsGpS41BqMhSrHVXgMpdjS6xeKZAs02.:waka99
 ```
-
+--------
 e5d8870e5bdd26602cab8dbe07a942c8669e56d6
 
 
