@@ -216,12 +216,11 @@ hashcat -m 1800 hahahashes.txt rockyou.txt -O
 $6$aReallyHardSalt$6WKUTqzq.UQQmrm0p/T7MPpMbGNnzXPMAXi4bJMl9be.cfi3/qxIf.hsGpS41BqMhSrHVXgMpdjS6xeKZAs02.:waka99
 ```
 --------
+HMAC-SHA1
 e5d8870e5bdd26602cab8dbe07a942c8669e56d6
 
 
 ```
-HMAC-SHA1
-
 hashid e5d8870e5bdd26602cab8dbe07a942c8669e56d6                                                                   
 Analyzing 'e5d8870e5bdd26602cab8dbe07a942c8669e56d6'
 [+] SHA-1 
