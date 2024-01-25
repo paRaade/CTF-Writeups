@@ -105,12 +105,17 @@ Analyzing '$2y$12$Dwt1BZj6pcyc3Dy1FWZ5ieeUznr71EeNkJkUlypTsgbX1H68wsRom'
 [+] Woltlab Burning Board 4.x 
 [+] bcrypt 
 
+The total number of passwords in rockyou
 cat rockyou.txt | wc -l
 14344392
 
+Copied contents rockyou.txt to a new file
 cp rockyou.txt rockyou_new.txt
+
+Created another file with all passwords that have four characters and less
 awk 'length($0) <= 4' rockyou_new.txt > rockyou_four.txt
 
+Total number of passwords in final rockyou file
 cat rockyou_four.txt | wc -l
 21028
 
