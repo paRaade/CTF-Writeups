@@ -199,12 +199,12 @@ hashcat -m 1000 hahahashes.txt rockyou.txt -r rules/OneRuleToRuleThemAll.rule
 1dfeca0c002ae40b8619ecf94819cc1b:n63umy8lkf4i
 ```
 ---------
-```
+
 sha512
 Hash: $6$aReallyHardSalt$6WKUTqzq.UQQmrm0p/T7MPpMbGNnzXPMAXi4bJMl9be.cfi3/qxIf.hsGpS41BqMhSrHVXgMpdjS6xeKZAs02.
 
 Salt: aReallyHardSalt
-```
+
 ```
 SHA-512
 
