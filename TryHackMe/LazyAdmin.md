@@ -255,6 +255,7 @@ http://10.10.198.128/content/inc/ads/
 
 
 **Initial Foothold** 
+
 The user.txt flag can be found in the /home/itguy directory
 ```
 [*] Meterpreter session 1 opened (10.13.0.39:4444 -> 10.10.198.128:58946) at 2024-01-25 18:26:27 -0500
