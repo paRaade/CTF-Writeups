@@ -1,4 +1,5 @@
 Lab: [LazyAdmin](https://tryhackme.com/room/lazyadmin)
+
 Tools: 
  - **nmap**:  tool to find open ports, detect operating systems and discover potential vulnerabilities 
  - **gowitness**: command line tool written in Go to capture and screenshot web pages
@@ -58,8 +59,8 @@ Nmap done: 1 IP address (1 host up) scanned in 24.50 seconds
 ```
 ---
 **Website Enumeration (Port 80)**
+![http-10 10 198 128-](https://github.com/paRaade/CTF-Writeups/assets/126734769/90380ba1-adae-44e7-bf50-01981dae60c3)
 
-Ubuntu Home Page
 
 Using ffuf to enumerate the root directory revealed one sub-directory, named content
 
@@ -96,7 +97,8 @@ server-status           [Status: 403, Size: 278, Words: 20, Lines: 10, Duration:
 
 Accessing the provided URL, http://10.10.198.128/content/, discloses a content management system called Sweet Rice
 
-image of webpage
+![http-10 10 198 128-content-](https://github.com/paRaade/CTF-Writeups/assets/126734769/6bb088a2-02a1-4ba0-ad75-9b62bd170d92)
+
 
 Further enumeration revealed more subdirectories
 ```
@@ -137,6 +139,7 @@ attachment              [Status: 301, Size: 327, Words: 20, Lines: 10, Duration:
 Sweet Rice Version 1.5.1: http://10.10.198.128/content/inc/lastest.txt
 mysql_bakup_20191129023059-1.5.1.sql: http://10.10.198.128/content/inc/mysql_backup/
 ```
+
 **mysql_bakup_20191129023059-1.5.1.sql Contents (line 79)**
 
 The mysql file has an md5 hash. I took the hash: 42f749ade7f9e195bf475f37a44cafcb and used crackstation to get it's plaintext password Password123
@@ -154,8 +157,8 @@ manager:Password123
 Through prior enumeration I found the login portal
 ```
 Sweet Rice Login Portal: http://10.10.198.128/content/as/
-****************Login portal image ****************
 ```
+![http-10 10 198 128-content-as-](https://github.com/paRaade/CTF-Writeups/assets/126734769/25c2fcc0-41ad-4989-bace-a9c19153123f)
 
 Using the following credentials I was able to successfully login to SweetRice
 **username**: manager
