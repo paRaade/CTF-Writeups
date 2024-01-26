@@ -156,7 +156,7 @@ The mysql file has an md5 hash. I took the hash: 42f749ade7f9e195bf475f37a44cafc
 ```
 manager:Password123
 ```
-![[Pasted image 20240125172601.png]]
+
 
 Through prior enumeration I found the login portal
 ```
@@ -165,6 +165,7 @@ Sweet Rice Login Portal: http://10.10.198.128/content/as/
 ![http-10 10 198 128-content-as-](https://github.com/paRaade/CTF-Writeups/assets/126734769/25c2fcc0-41ad-4989-bace-a9c19153123f)
 
 Using the following credentials I was able to successfully login to SweetRice
+
 **username**: manager
 **password**: Password123
 -----
