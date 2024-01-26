@@ -138,7 +138,6 @@ attachment              [Status: 301, Size: 327, Words: 20, Lines: 10, Duration:
 :: Progress: [220546/220546] :: Job [1/1] :: 179 req/sec :: Duration: [0:21:01] :: Errors: 0 :
 ```
 -----
-**Further enumeration**
 
 ```
 Sweet Rice Version 1.5.1: http://10.10.198.128/content/inc/lastest.txt
