@@ -164,8 +164,9 @@ Sweet Rice Login Portal: http://10.10.198.128/content/as/
 ```
 ![http-10 10 198 128-content-as-](https://github.com/paRaade/CTF-Writeups/assets/126734769/25c2fcc0-41ad-4989-bace-a9c19153123f)
 
-
+```
 Using the following credentials I was able to successfully login to SweetRice with the following credentials **username**: manager and **password**: Password123
+```
 -----
 **Searchsploit**
 
