@@ -146,10 +146,9 @@ The mysql file has an md5 hash. I took the hash: 42f749ade7f9e195bf475f37a44cafc
 ```
 14 => 'INSERT INTO `%--%_options` VALUES(\'1\',\'global_setting\',\'a:17:{s:4:\\"name\\";s:25:\\"Lazy Admin&#039;s Website\\";s:6:\\"author\\";s:10:\\"Lazy Admin\\";s:5:\\"title\\";s:0:\\"\\";s:8:\\"keywords\\";s:8:\\"Keywords\\";s:11:\\"description\\";s:11:\\"Description\\";s:5:\\"admin\\";s:7:\\"manager\\";s:6:\\"passwd\\";s:32:\\"42f749ade7f9e195bf475f37a44cafcb\\";s:5:\\"close\\";i:1;s:9:\\"close_tip\\";s:454:\\"<p>Welcome to SweetRice - Thank your for install SweetRice as your website management system.</p><h1>This site is building now , please come late.</h1><p>If you are the webmaster,please go to Dashboard -> General -> Website setting </p><p>and uncheck the checkbox \\"Site close\\" to open your website.</p><p>More help at <a href=\\"http://www.basic-cms.org/docs/5-things-need-to-be-done-when-SweetRice-installed/\\">Tip for Basic CMS SweetRice installed</a></p>\\";s:5:\\"cache\\";i:0;s:13:\\"cache_expired\\";i:0;s:10:\\"user_track\\";i:0;s:11:\\"url_rewrite\\";i:0;s:4:\\"logo\\";s:0:\\"\\";s:5:\\"theme\\";s:0:\\"\\";s:4:\\"lang\\";s:9:\\"en-us.php\\";s:11:\\"admin_email\\";N;}\',\'1575023409\');',
 ```
+![Pasted image 20240125172601](https://github.com/paRaade/CTF-Writeups/assets/126734769/8b4ff299-0477-4588-883e-c29e946b43ee)
 
 ```
-
-
 manager:Password123
 ```
 ![[Pasted image 20240125172601.png]]
@@ -242,10 +241,15 @@ I then take the contents of the shell.php generated before and paste it at the f
 ```
 http://10.10.198.128/content/as/?type=ad
 ```
+![Pasted image 20240125182510](https://github.com/paRaade/CTF-Writeups/assets/126734769/154f22b3-204e-4e20-84f3-9ba297d8d3e6)
+
+
+
 The php reverse shell is accessible at the following url. Once clicked on metasploit will catch the shell and I will now have remote access to the target machine
 ```
 http://10.10.198.128/content/inc/ads/
 ```
+![Pasted image 20240125182623](https://github.com/paRaade/CTF-Writeups/assets/126734769/7383d701-2062-4c8e-aaed-c12ad968d4a4)
 
 
 
