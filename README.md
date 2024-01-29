@@ -8,4 +8,5 @@
  - [Crack the Hash](TryHackMe/Crack%20the%20hash.md)
  - [Bounty Hacker](TryHackMe/Bounty%20Hacker.md)
  - [LazyAdmin](TryHackMe/LazyAdmin.md)
+ - [Brute It](TryHackMe/Brute%20It.md)
 
