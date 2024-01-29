@@ -151,7 +151,7 @@ Highlight password and then click on "Add".
 
 
 Click on 'Payloads,' then select 'Add from List' and choose 'passwords.' Turn off 'URL-encode these characters' under Payload encoding. Finally, click on 'Start Attack".
-```
+
 ![Pasted image 20240128185019](https://github.com/paRaade/CTF-Writeups/assets/126734769/c2659316-8d4a-49c4-982f-53f1f5314dec)
 ![Pasted image 20240128185115](https://github.com/paRaade/CTF-Writeups/assets/126734769/9310b26c-5e5e-4430-af5b-aaf5cb12bee7)
 
