@@ -248,7 +248,7 @@ THM{a_password_is_not_a_barrier}
 
 ```
 
-Privilege Escalation
+**Privilege Escalation**
 
 This command shows what sudo privileges john has
 ```
