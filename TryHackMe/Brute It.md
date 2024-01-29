@@ -134,12 +134,12 @@ Either [CTRL + U] or Right clicking on the admin portal page and then clicking V
 Configure FoxyProxy to tunnel browser traffic through port 8080, which is the same port used by Burp Suite. Then, enable the intercept feature in Burp Proxy. Finally, log in using 'admin' as the username and any random word as the password.
 
 
-```
+
 ![Pasted image 20240128184355](https://github.com/paRaade/CTF-Writeups/assets/126734769/cd7d0eb3-e052-4a32-8789-d179e7a84801)
 ![Pasted image 20240128184548](https://github.com/paRaade/CTF-Writeups/assets/126734769/765be4f1-27af-4090-826c-c7435d50db3d)
 
 
-```
+
 Send Response to Burp Intruder
 Highlight password and then click on "Add".
 
@@ -169,8 +169,8 @@ Another way to find the correct payload  is to use  "Filter: Showing all items".
 
 
 http://10.10.58.60/admin/
-```
-```
+
+
 Logging in with the correct  credentials redirects the admin user to http://10.10.58.60/admin/panel/
 credentials: admin:xavier
 
@@ -182,13 +182,13 @@ credentials: admin:xavier
 Clicking on RSA Private Key link redirects the user to http://10.10.58.60/admin/panel/id_rsa
 Right click on page then click save as to download the private key
 
-```
+
 ![Pasted image 20240128190213](https://github.com/paRaade/CTF-Writeups/assets/126734769/9b6e5186-f2c5-4d34-ae7d-937744415b2b)
 ![Pasted image 20240128190558](https://github.com/paRaade/CTF-Writeups/assets/126734769/61d744ca-d760-4827-9664-4b284edfb8cf)
 
 
 
-
+```
 To convert the private key to a format that john the ripper can crack use the following command
  ssh2john id_rsa _rsa > id_rsa.hash               
 
