@@ -175,10 +175,7 @@ Logging in with the correct  credentials redirects the admin user to [http]://10
 
 
 
-![[Pasted image 20240128190213.png]]
-
-
-Clicking on RSA Private Key link redirects the user to http://10.10.58.60/admin/panel/id_rsa
+Clicking on RSA Private Key link redirects the user to [http]://10.10.58.60/admin/panel/id_rsa
 Right click on page then click save as to download the private key
 
 
