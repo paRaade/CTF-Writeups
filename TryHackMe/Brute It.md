@@ -94,7 +94,7 @@ admin                   [Status: 301, Size: 310, Words: 20, Lines: 10, Duration:
 ![http-10 10 58 60-admin-](https://github.com/paRaade/CTF-Writeups/assets/126734769/ecd4c617-a6ec-4d77-ac6f-5b206f849276)
 
 
-Either [CTRL + U] or Right clicking on the admin portal page and then clicking View Page Source will take us to the folliwing URL, view-source:http://10.10.58.60/admin/ and reveal a comment stating that the username is "admin"
+Either [CTRL + U] or Right clicking on the admin portal page and then clicking View Page Source will take us to the folliwing URL, view-source:[http]://10.10.58.60/admin/ and reveal a comment stating that the username is "admin"
 
 ```
 <!DOCTYPE html>
@@ -211,7 +211,7 @@ Change the permissions of the private key with the following command
 chmod 600 id_rsa                               
 ```
 
-SSH
+**SSH (Port 22)**
 
 Login to the target machine
 ```
@@ -275,6 +275,7 @@ THM{pr1v1l3g3_3sc4l4t10n}
 
 
 **Login as root user**
+
 With sudo privileges I can read the /etc/shadow file which is inaccesible to regular users
 
 ```
