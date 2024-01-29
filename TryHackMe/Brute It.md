@@ -162,7 +162,7 @@ Sorting by status code shows one payload has an HTTP response code of 302
 ![Pasted image 20240128185530](https://github.com/paRaade/CTF-Writeups/assets/126734769/cefd0faa-7c0f-4fd1-ba9b-fadd75e4f7e6)
 
 
-Another way to find the correct payload  is to use  "Filter: Showing all items". Each failed login has the following  in its response: <p>Username or password invalid</p>. By clicking on negative search and using that statement it will remove all response that are using invalid credentials
+Another way to find the correct payload  is to use  "Filter: Showing all items". Each failed login has the following  in its response: ```<p>Username or password invalid</p>```. By clicking on negative search and using that statement it will remove all response that are using invalid credentials
 
 ![Pasted image 20240128185802](https://github.com/paRaade/CTF-Writeups/assets/126734769/19ba437e-f595-495a-9d60-488a01f506cd)
 ![Pasted image 20240128185847](https://github.com/paRaade/CTF-Writeups/assets/126734769/14d35e49-848d-41c4-8e20-580f4e4d0932)
