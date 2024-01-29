@@ -184,12 +184,13 @@ Right click on page then click save as to download the private key
 
 
 
-```
+
 To convert the private key to a format that john the ripper can crack use the following command
+```
 ssh2john id_rsa _rsa > id_rsa.hash               
-
+``
 To crack the hash run the following command
-
+```
 john --wordlist=rockyou.txt id_rsa.hash                  
 Using default input encoding: UTF-8
 Loaded 1 password hash (SSH, SSH private key [RSA/DSA/EC/OPENSSH 32/64])
@@ -205,11 +206,9 @@ Use the "--show" option to display all of the cracked passwords reliably
 Session completed. 
 
 ```
-
 Change the permissions of the private key with the following command
 ```
-chmod 600 id_rsa
-                                      
+chmod 600 id_rsa                               
 ```
 
 SSH
