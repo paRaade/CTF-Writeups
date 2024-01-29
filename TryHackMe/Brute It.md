@@ -169,11 +169,9 @@ Another way to find the correct payload  is to use  "Filter: Showing all items".
 
 
 
-http://10.10.58.60/admin/
+Logging in with the correct  credentials redirects the admin user to [http]://10.10.58.60/admin/panel/
 
-
-Logging in with the correct  credentials redirects the admin user to http://10.10.58.60/admin/panel/
-credentials: admin:xavier
+```credentials: admin:xavier```
 
 
 
