@@ -8,8 +8,8 @@ Tools:
  - **metasploit**:framework for developing, testing, and executing exploits on target systems.
 - **ssh2john**: used for extracting password hashes from the OpenSSH private key files.
 - **john the ripper**: password cracking software
-- **burp suite pro:**
-- **foxy proxy:**
+- **burp suite pro:** web application security testing platform
+- **foxy proxy:** browser extension that allows users to easily switch between different proxy configurations
 
 After connecting to the network through TryHackMe's VPN. I want to make sure the target is reachable.
 
