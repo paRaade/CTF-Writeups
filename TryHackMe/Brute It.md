@@ -28,6 +28,7 @@ rtt min/avg/max/mdev = 188.213/189.910/192.094/1.490 ms
                                                            
 ```
 **Host Enumeration**
+
 After confirming that  I can reach the target, I run an nmap scan.
 
 
