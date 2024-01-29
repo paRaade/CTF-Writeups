@@ -93,10 +93,10 @@ admin                   [Status: 301, Size: 310, Words: 20, Lines: 10, Duration:
 ```
 ![http-10 10 58 60-admin-](https://github.com/paRaade/CTF-Writeups/assets/126734769/ecd4c617-a6ec-4d77-ac6f-5b206f849276)
 
-```
+
 Either [CTRL + U] or Right clicking on the admin portal page and then clicking View Page Source will take us to the folliwing URL, view-source:http://10.10.58.60/admin/ and reveal a comment stating that the username is "admin"
 
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
