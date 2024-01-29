@@ -1,5 +1,6 @@
 
 Lab: [Brute It](https://tryhackme.com/room/bruteit)
+
 Tools: 
  - **nmap**:  tool to find open ports, detect operating systems and discover potential vulnerabilities 
  - **gowitness**: command line tool written in Go to capture and screenshot web pages
@@ -128,36 +129,43 @@ Either [CTRL + U] or Right clicking on the admin portal page and then clicking V
 ``
 ```
 
-Your instructions are mostly clear, but you can improve the structure for better readability. Here's a refined version:
+
 
 Configure FoxyProxy to tunnel browser traffic through port 8080, which is the same port used by Burp Suite. Then, enable the intercept feature in Burp Proxy. Finally, log in using 'admin' as the username and any random word as the password.
 
 
 ```
-![[Pasted image 20240128184355.png]]
-```
-Send Response to Burp Intruder
-```
-![[Pasted image 20240128184548.png]]
+![Pasted image 20240128184355](https://github.com/paRaade/CTF-Writeups/assets/126734769/cd7d0eb3-e052-4a32-8789-d179e7a84801)
+![Pasted image 20240128184548](https://github.com/paRaade/CTF-Writeups/assets/126734769/765be4f1-27af-4090-826c-c7435d50db3d)
+
 
 ```
+Send Response to Burp Intruder
 Highlight password and then click on "Add".
 ```
-![[Pasted image 20240128184826.png]]
+![Pasted image 20240128184826](https://github.com/paRaade/CTF-Writeups/assets/126734769/f137b188-e976-4d48-82e7-c570fffcd09c)
+
+
+```
+
+```
 ```
 Click on 'Payloads,' then select 'Add from List' and choose 'passwords.' Turn off 'URL-encode these characters' under Payload encoding. Finally, click on 'Start Attack".
 ```
-![[Pasted image 20240128185019.png]]
-![[Pasted image 20240128185115.png]]
+![Pasted image 20240128185019](https://github.com/paRaade/CTF-Writeups/assets/126734769/c2659316-8d4a-49c4-982f-53f1f5314dec)
+![Pasted image 20240128185115](https://github.com/paRaade/CTF-Writeups/assets/126734769/9310b26c-5e5e-4430-af5b-aaf5cb12bee7)
+
 ```
 Sorting by status code shows one payload has an HTTP response code of 302
 ```
-![[Pasted image 20240128185530.png]]
+![Pasted image 20240128185530](https://github.com/paRaade/CTF-Writeups/assets/126734769/cefd0faa-7c0f-4fd1-ba9b-fadd75e4f7e6)
 
 ```
 Another way to find the correct payload  is to use  "Filter: Showing all items". Each failed login has the following  in its response: <p>Username or password invalid</p>. By clicking on negative search and using that statement it will remove all response that are using invalid credentials
 ```
-![[Pasted image 20240128185802.png]]![[Pasted image 20240128185847.png]]
+![Pasted image 20240128185802](https://github.com/paRaade/CTF-Writeups/assets/126734769/19ba437e-f595-495a-9d60-488a01f506cd)
+![Pasted image 20240128185847](https://github.com/paRaade/CTF-Writeups/assets/126734769/14d35e49-848d-41c4-8e20-580f4e4d0932)
+
 ```
 
 http://10.10.58.60/admin/
@@ -175,8 +183,10 @@ Clicking on RSA Private Key link redirects the user to http://10.10.58.60/admin/
 Right click on page then click save as to download the private key
 
 ```
+![Pasted image 20240128190213](https://github.com/paRaade/CTF-Writeups/assets/126734769/9b6e5186-f2c5-4d34-ae7d-937744415b2b)
+![Pasted image 20240128190558](https://github.com/paRaade/CTF-Writeups/assets/126734769/61d744ca-d760-4827-9664-4b284edfb8cf)
 
-![[Pasted image 20240128190558.png]]
+
 
 ```
 └─# cat id_rsa               
